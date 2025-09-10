@@ -1,0 +1,13 @@
+com/example/service/hh/HhGetterFromBioTest.class
+com/example/AppTest.class
+com/example/service/hh/HhApiTest.class
+com/example/controller/HomeControllerTest.class
+com/example/service/general/VacancyCleanerTest.class
+com/example/service/general/VacancyServiceTest.class
+com/example/service/general/ExportServiceTest.class
+com/example/service/hh/HhFetcherTest.class
+com/example/service/general/VacancySortServiceTest.class
+com/example/service/general/VacancyStatsServiceTest.class
+com/example/AllTests.class
+com/example/service/hh/HhToVacancyTest.class
+com/example/service/general/VacancyFilterTest.class

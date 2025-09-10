@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------------
+Test set: com.example.service.general.ExportServiceTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.139 s <<< FAILURE! -- in com.example.service.general.ExportServiceTest
+com.example.service.general.ExportServiceTest.testWriteVacanciesCsvSingleVacancyAllFieldsPopulated -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <42,"Java Developer","ExampleCorp","https://example.com/job/42","Екатеринбург","Java","5000","8000","Must know Spring","Implement features",2025-01-15 10:30:00> but was: <>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.example.service.general.ExportServiceTest.testWriteVacanciesCsvSingleVacancyAllFieldsPopulated(ExportServiceTest.java:83)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.service.general.ExportServiceTest.testWriteVacanciesXlsxSingleVacancyAndHeader -- Time elapsed: 0.062 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Row.getCell(int)" because "dataRow" is null
+	at com.example.service.general.ExportServiceTest.testWriteVacanciesXlsxSingleVacancyAndHeader(ExportServiceTest.java:183)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.service.general.ExportServiceTest.testWriteVacanciesCsvMultipleVacancies_withNullFields -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at com.example.service.general.ExportServiceTest.testWriteVacanciesCsvMultipleVacancies_withNullFields(ExportServiceTest.java:115)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

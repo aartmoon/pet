@@ -1,0 +1,13 @@
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/AllTests.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/AppTest.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/controller/HomeControllerTest.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/service/general/ExportServiceTest.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/service/general/VacancyCleanerTest.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/service/general/VacancyFilterTest.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/service/general/VacancyServiceTest.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/service/general/VacancySortServiceTest.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/service/general/VacancyStatsServiceTest.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/service/hh/HhApiTest.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/service/hh/HhFetcherTest.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/service/hh/HhGetterFromBioTest.java
+/Users/artemsharkov/Documents/MyParser/src/test/java/com/example/service/hh/HhToVacancyTest.java

@@ -1,0 +1,4910 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.service.general.ExportServiceTest" time="0.139" tests="4" errors="1" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/artemsharkov/Documents/MyParser/target/test-classes:/Users/artemsharkov/Documents/MyParser/target/classes:/Users/artemsharkov/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/artemsharkov/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/artemsharkov/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/artemsharkov/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/artemsharkov/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.3/spring-boot-starter-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot/3.2.3/spring-boot-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-context/6.1.4/spring-context-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.3/spring-boot-autoconfigure-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.3/spring-boot-starter-logging-3.2.3.jar:/Users/artemsharkov/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/artemsharkov/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/artemsharkov/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/artemsharkov/.m2/repository/org/slf4j/jul-to-slf4j/2.0.12/jul-to-slf4j-2.0.12.jar:/Users/artemsharkov/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-core/6.1.4/spring-core-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-jcl/6.1.4/spring-jcl-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.3/spring-boot-starter-test-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-test/3.2.3/spring-boot-test-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.3/spring-boot-test-autoconfigure-3.2.3.jar:/Users/artemsharkov/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/artemsharkov/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/Users/artemsharkov/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/artemsharkov/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/artemsharkov/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/artemsharkov/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/artemsharkov/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/artemsharkov/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/artemsharkov/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/artemsharkov/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/artemsharkov/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/artemsharkov/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/artemsharkov/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-test/6.1.4/spring-test-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.3/spring-boot-starter-web-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.3/spring-boot-starter-json-3.2.3.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.3/spring-boot-starter-tomcat-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.19/tomcat-embed-core-10.1.19.jar:/Users/artemsharkov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.19/tomcat-embed-el-10.1.19.jar:/Users/artemsharkov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.19/tomcat-embed-websocket-10.1.19.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-web/6.1.4/spring-web-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-beans/6.1.4/spring-beans-6.1.4.jar:/Users/artemsharkov/.m2/repository/io/micrometer/micrometer-observation/1.12.3/micrometer-observation-1.12.3.jar:/Users/artemsharkov/.m2/repository/io/micrometer/micrometer-commons/1.12.3/micrometer-commons-1.12.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-webmvc/6.1.4/spring-webmvc-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-aop/6.1.4/spring-aop-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-expression/6.1.4/spring-expression-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-devtools/3.2.3/spring-boot-devtools-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.3/spring-boot-starter-data-jpa-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.3/spring-boot-starter-aop-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.3/spring-boot-starter-jdbc-3.2.3.jar:/Users/artemsharkov/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-jdbc/6.1.4/spring-jdbc-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar:/Users/artemsharkov/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/artemsharkov/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/artemsharkov/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/artemsharkov/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/artemsharkov/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/artemsharkov/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/artemsharkov/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/artemsharkov/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/artemsharkov/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/artemsharkov/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/artemsharkov/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/artemsharkov/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/artemsharkov/.m2/repository/org/springframework/data/spring-data-jpa/3.2.3/spring-data-jpa-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/data/spring-data-commons/3.2.3/spring-data-commons-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-orm/6.1.4/spring-orm-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-tx/6.1.4/spring-tx-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-aspects/6.1.4/spring-aspects-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/postgresql/postgresql/42.6.1/postgresql-42.6.1.jar:/Users/artemsharkov/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/Users/artemsharkov/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/Users/artemsharkov/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/Users/artemsharkov/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/Users/artemsharkov/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/Users/artemsharkov/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/artemsharkov/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/Users/artemsharkov/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/Users/artemsharkov/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.4/jackson-dataformat-yaml-2.15.4.jar:/Users/artemsharkov/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-thymeleaf/3.2.3/spring-boot-starter-thymeleaf-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/thymeleaf/thymeleaf-spring6/3.1.2.RELEASE/thymeleaf-spring6-3.1.2.RELEASE.jar:/Users/artemsharkov/.m2/repository/org/thymeleaf/thymeleaf/3.1.2.RELEASE/thymeleaf-3.1.2.RELEASE.jar:/Users/artemsharkov/.m2/repository/org/attoparser/attoparser/2.0.7.RELEASE/attoparser-2.0.7.RELEASE.jar:/Users/artemsharkov/.m2/repository/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-configuration-processor/3.2.3/spring-boot-configuration-processor-3.2.3.jar:/Users/artemsharkov/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/artemsharkov/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.2/junit-platform-suite-api-1.10.2.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.2/junit-platform-suite-commons-1.10.2.jar:/Users/artemsharkov/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/artemsharkov/.m2/repository/org/mockito/mockito-core/5.12.0/mockito-core-5.12.0.jar:/Users/artemsharkov/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar:/Users/artemsharkov/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/artemsharkov/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/Users/artemsharkov/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar:/Users/artemsharkov/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/Users/artemsharkov/.m2/repository/commons-codec/commons-codec/1.16.1/commons-codec-1.16.1.jar:/Users/artemsharkov/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/artemsharkov/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/Users/artemsharkov/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar:/Users/artemsharkov/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/Users/artemsharkov/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/artemsharkov/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/artemsharkov/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar:/Users/artemsharkov/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/artemsharkov/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/artemsharkov/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:"/>
+    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="catalina.useNaming" value="false"/>
+    <property name="java.vendor.url" value="https://www.microsoft.com"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Users/artemsharkov/Library/Java/JavaVirtualMachines/ms-21.0.7/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/artemsharkov/Documents/MyParser/target/surefire/surefirebooter-20250607004740070_3.jar /Users/artemsharkov/Documents/MyParser/target/surefire 2025-06-07T00-47-40_027-jvmRun1 surefire-20250607004740070_1tmp surefire_0-20250607004740070_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/artemsharkov/Documents/MyParser/target/test-classes:/Users/artemsharkov/Documents/MyParser/target/classes:/Users/artemsharkov/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/artemsharkov/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/artemsharkov/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/artemsharkov/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/artemsharkov/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.3/spring-boot-starter-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot/3.2.3/spring-boot-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-context/6.1.4/spring-context-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.3/spring-boot-autoconfigure-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.3/spring-boot-starter-logging-3.2.3.jar:/Users/artemsharkov/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/artemsharkov/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/artemsharkov/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/artemsharkov/.m2/repository/org/slf4j/jul-to-slf4j/2.0.12/jul-to-slf4j-2.0.12.jar:/Users/artemsharkov/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-core/6.1.4/spring-core-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-jcl/6.1.4/spring-jcl-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.3/spring-boot-starter-test-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-test/3.2.3/spring-boot-test-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.3/spring-boot-test-autoconfigure-3.2.3.jar:/Users/artemsharkov/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/artemsharkov/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/Users/artemsharkov/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/artemsharkov/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/artemsharkov/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/artemsharkov/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/artemsharkov/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/artemsharkov/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/artemsharkov/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/artemsharkov/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/artemsharkov/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/artemsharkov/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/artemsharkov/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-test/6.1.4/spring-test-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.3/spring-boot-starter-web-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.3/spring-boot-starter-json-3.2.3.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.3/spring-boot-starter-tomcat-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.19/tomcat-embed-core-10.1.19.jar:/Users/artemsharkov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.19/tomcat-embed-el-10.1.19.jar:/Users/artemsharkov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.19/tomcat-embed-websocket-10.1.19.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-web/6.1.4/spring-web-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-beans/6.1.4/spring-beans-6.1.4.jar:/Users/artemsharkov/.m2/repository/io/micrometer/micrometer-observation/1.12.3/micrometer-observation-1.12.3.jar:/Users/artemsharkov/.m2/repository/io/micrometer/micrometer-commons/1.12.3/micrometer-commons-1.12.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-webmvc/6.1.4/spring-webmvc-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-aop/6.1.4/spring-aop-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-expression/6.1.4/spring-expression-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-devtools/3.2.3/spring-boot-devtools-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.3/spring-boot-starter-data-jpa-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.3/spring-boot-starter-aop-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.3/spring-boot-starter-jdbc-3.2.3.jar:/Users/artemsharkov/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-jdbc/6.1.4/spring-jdbc-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar:/Users/artemsharkov/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/artemsharkov/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/artemsharkov/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/artemsharkov/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/artemsharkov/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/artemsharkov/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/artemsharkov/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/artemsharkov/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/artemsharkov/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/artemsharkov/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/artemsharkov/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/artemsharkov/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/artemsharkov/.m2/repository/org/springframework/data/spring-data-jpa/3.2.3/spring-data-jpa-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/data/spring-data-commons/3.2.3/spring-data-commons-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-orm/6.1.4/spring-orm-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-tx/6.1.4/spring-tx-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/springframework/spring-aspects/6.1.4/spring-aspects-6.1.4.jar:/Users/artemsharkov/.m2/repository/org/postgresql/postgresql/42.6.1/postgresql-42.6.1.jar:/Users/artemsharkov/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/Users/artemsharkov/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/Users/artemsharkov/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/Users/artemsharkov/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/Users/artemsharkov/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/Users/artemsharkov/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/artemsharkov/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/Users/artemsharkov/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/Users/artemsharkov/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/artemsharkov/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.4/jackson-dataformat-yaml-2.15.4.jar:/Users/artemsharkov/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-starter-thymeleaf/3.2.3/spring-boot-starter-thymeleaf-3.2.3.jar:/Users/artemsharkov/.m2/repository/org/thymeleaf/thymeleaf-spring6/3.1.2.RELEASE/thymeleaf-spring6-3.1.2.RELEASE.jar:/Users/artemsharkov/.m2/repository/org/thymeleaf/thymeleaf/3.1.2.RELEASE/thymeleaf-3.1.2.RELEASE.jar:/Users/artemsharkov/.m2/repository/org/attoparser/attoparser/2.0.7.RELEASE/attoparser-2.0.7.RELEASE.jar:/Users/artemsharkov/.m2/repository/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar:/Users/artemsharkov/.m2/repository/org/springframework/boot/spring-boot-configuration-processor/3.2.3/spring-boot-configuration-processor-3.2.3.jar:/Users/artemsharkov/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/artemsharkov/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.2/junit-platform-suite-api-1.10.2.jar:/Users/artemsharkov/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.2/junit-platform-suite-commons-1.10.2.jar:/Users/artemsharkov/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/artemsharkov/.m2/repository/org/mockito/mockito-core/5.12.0/mockito-core-5.12.0.jar:/Users/artemsharkov/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar:/Users/artemsharkov/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/artemsharkov/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/Users/artemsharkov/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar:/Users/artemsharkov/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/Users/artemsharkov/.m2/repository/commons-codec/commons-codec/1.16.1/commons-codec-1.16.1.jar:/Users/artemsharkov/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/artemsharkov/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/Users/artemsharkov/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar:/Users/artemsharkov/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/Users/artemsharkov/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/artemsharkov/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/artemsharkov/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar:/Users/artemsharkov/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/artemsharkov/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/artemsharkov/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/artemsharkov"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="/Users/artemsharkov/Library/Java/JavaVirtualMachines/ms-21.0.7/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/artemsharkov/Documents/MyParser"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/artemsharkov/Documents/MyParser/target/surefire/surefirebooter-20250607004740070_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="21.0.7+6-LTS"/>
+    <property name="user.name" value="artemsharkov"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.5"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Microsoft-11369939"/>
+    <property name="localRepository" value="/Users/artemsharkov/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/pv/blp3zp192cs1zb_sm1d9rrqh0000gn/T/"/>
+    <property name="idea.version" value="2025.1.1.1"/>
+    <property name="com.zaxxer.hikari.pool_number" value="3"/>
+    <property name="catalina.home" value="/private/var/folders/pv/blp3zp192cs1zb_sm1d9rrqh0000gn/T/tomcat.8080.12936371036919617847"/>
+    <property name="java.version" value="21.0.7"/>
+    <property name="user.dir" value="/Users/artemsharkov/Documents/MyParser"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="28832"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="catalina.base" value="/private/var/folders/pv/blp3zp192cs1zb_sm1d9rrqh0000gn/T/tomcat.8080.7774036158615133965"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/artemsharkov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="java.vm.version" value="21.0.7+6-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
+  </properties>
+  <testcase name="testWriteVacanciesCsvSingleVacancyAllFieldsPopulated" classname="com.example.service.general.ExportServiceTest" time="0.164">
+    <failure message="expected: &lt;42,&quot;Java Developer&quot;,&quot;ExampleCorp&quot;,&quot;https://example.com/job/42&quot;,&quot;Екатеринбург&quot;,&quot;Java&quot;,&quot;5000&quot;,&quot;8000&quot;,&quot;Must know Spring&quot;,&quot;Implement features&quot;,2025-01-15 10:30:00&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <42,"Java Developer","ExampleCorp","https://example.com/job/42","Екатеринбург","Java","5000","8000","Must know Spring","Implement features",2025-01-15 10:30:00> but was: <>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.example.service.general.ExportServiceTest.testWriteVacanciesCsvSingleVacancyAllFieldsPopulated(ExportServiceTest.java:83)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></failure>
+  </testcase>
+  <testcase name="testWriteVacanciesCsvSingleVacancyAllFieldsPopulated" classname="com.example.service.general.ExportServiceTest" time="0.001">
+    <failure message="expected: &lt;42,&quot;Java Developer&quot;,&quot;ExampleCorp&quot;,&quot;https://example.com/job/42&quot;,&quot;Екатеринбург&quot;,&quot;Java&quot;,&quot;5000&quot;,&quot;8000&quot;,&quot;Must know Spring&quot;,&quot;Implement features&quot;,2025-01-15 10:30:00&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <42,"Java Developer","ExampleCorp","https://example.com/job/42","Екатеринбург","Java","5000","8000","Must know Spring","Implement features",2025-01-15 10:30:00> but was: <>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.example.service.general.ExportServiceTest.testWriteVacanciesCsvSingleVacancyAllFieldsPopulated(ExportServiceTest.java:83)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></failure>
+  </testcase>
+  <testcase name="testWriteVacanciesXlsxEmptyListGeneratesOnlyHeader" classname="com.example.service.general.ExportServiceTest" time="1.89">
+    <system-out><![CDATA[Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at ИНВИТРО
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик в IT-компанию at Selsup
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java developer at Снэп АйТи
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик Middle at ГК Орбита
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (разработка баллистических систем) at БЮРО 1440
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (офис на ИС, после удаленно) at Снэп АйТи
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Ведущий java-разработчик at А2М
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java разработчик/Backend разработчик at ЮниСейф
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Стажер–разработчик Java at КРОК
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at CORE
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Utrace
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at AG Soft
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Синхро
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Разработчик JAVA 8 (legacy) at Транснефть-Технологии
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (Инвестиционный бизнес) at РСХБ-Интех
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at А2М
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java/Kotlin разработчик at Антара
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at R-Style Softlab (Эр-Стайл Софтлаб)
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (Middle+/Senior) at СИГМА
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java разработчик at Центр Новых Финансовых Сервисов
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик в проект страховой компании at VeryIT
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик младшего/среднего уровня (junior/middle Java developer) at НАО Инфоком
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (middle) at DIS Group
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java разработчик Middle+/Senior at Ростелеком Информационные Технологии
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java разработчик at НТЦ ЕЭС Информационные Комплексы
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Middle / Senior Java developer (Системы информационной безопасности) at Транснефть-Технологии
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at INPAS
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (Сениор, Мидл+) at Картнода
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java Developer at Московская Биржа
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java разработчик at Бэнкс Софт Системс
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Разработчик Java at ДЖЕЙКЕТ РАБОТА
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Java разработчик at АТОН
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Junior Java-разработчик at Gridnine
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Backend Developer (Java/Kotlin, Spring Boot, Oracle Database) at Форлинк
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at ВСК, САО
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Лига Цифровой Экономики
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Java developer at Lamoda Tech
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java разработчик (middle+/senior) at Swordfish Security
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Java-разработчик / Java developer at HR GROW
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java разработчик (middle) at MERLION
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Старший Java-разработчик at Синхро
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java developer at РТЛабс
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Middle Java Developer at ИЦ АЙ-ТЕКО
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Middle Java разработчик (Страховой конвейер) at Страховая компания Сбербанк страхование
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at getmatch
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Junior Java-разработчик at Рыбаков Алексей Николаевич
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Разработчик Java at Ростелеком Информационные Технологии
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Разработчик ( Java / React ) Платёжный сервис at ГКУ Инфогород
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Рефни
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java Spring Boot разработчик at Юнитариус
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java Developer at Дартс рекрутинг сервисез
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at DCloud
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Кадровое Агентство ОК Консалт
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 1
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 1
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Java developer at Hi, Rockits!
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Насонов Ярослав Константинович
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Java Developer at Правительство Москвы
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: QA Automation Engineer (Java) at Datanomica
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Кибернетика
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Middle Java Developer at Тайгер Трейд
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Java-разработчик at ЛАНИТ
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик Middle at Единая Цифровая Платформа
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java Developer at evrone.ru
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java разработчик at MIA Dev
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Лаборатория Безопасных Систем
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Backend разработчик (Java, middle) at Ком3
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (Junior) at Мираполис
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Фарватер
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Middle+/Senior Kotlin/Java developer at X5 Tech
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Junior Java/Kotlin Developer at MostFinance
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (middle/middle+) at ВСК, САО
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Java разработчик at Кросстех Солюшнс Групп
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at БФТ-Холдинг
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Middle Java разработчик at Национальная Лотерея
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Java Backend Engineer at Outlines Technologies
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Разработчик Java / Java Developer (middle) at АГ-Логистик
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Аврора
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Middle Java / Kotlin Developer at 8B WORLD PTE. LTD.
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Студия Олега Чулакова
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (middle+) at Фаззи Лоджик Лабс
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Backend Developer (Java/Kotlin) at ДэвТим-Групп
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (Junior) at Мираполис
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (Senior) at СК Сбербанк страхование жизни
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик Middle + at Фабрика Решений
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Lead Java Developer at Lenkep recruitment
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик Middle+ at Datanomica
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик (Middle) at НИИАС
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Middle Разработчик Java (PKI) at ИЦ АЙ-ТЕКО
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Middle Java-разработчик at СИНАПС ТЕХНОЛОДЖИ
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Java developer at RedLab
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Java разработчик at МКК Финмолл
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java разработчик at Цифровые технологии и платформы
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Scala/java developer at Datanomica
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Аналитика ИТ Лаб
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: QA Automation инженер (Java) at Deventica
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java-разработчик at Лига Цифровой Экономики
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Разработчик Java/Kotlin at РТК – Цифровой документооборот
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Java Developer (middle) at Московский филиал АО ЦентрИнформ
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior Kotlin/Java Developer at Xello
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Head of Backend (Java/Kotlin) at Clear Mind
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Vacancy already exists: Senior java разработчик at Интерфакс
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Summary - Saved: 0, Skipped: 100, From DB: 396, Total in result: 396
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Starting to fetch vacancies for language: Java and city: Москва
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.city,
+        v1_0.company,
+        v1_0.currency,
+        v1_0.language,
+        v1_0.link,
+        v1_0.published_at,
+        v1_0.requirement,
+        v1_0.responsibility,
+        v1_0.salary_from,
+        v1_0.salary_to,
+        v1_0.title 
+    from
+        vacancies v1_0 
+    where
+        (
+            ? is null 
+            or v1_0.language=?
+        ) 
+        and (
+            ? is null 
+            or v1_0.city=?
+        )
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Found 396 existing vacancies in database
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Search parameters - Language: Java, City: Москва
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at ИНВИТРО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик в IT-компанию at Selsup
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик Middle at ГК Орбита
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java developer at Снэп АйТи
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик (разработка баллистических систем) at БЮРО 1440
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик (офис на ИС, после удаленно) at Снэп АйТи
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий java-разработчик at А2М
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java разработчик/Backend разработчик at ЮниСейф
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Стажер–разработчик Java at КРОК
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at CORE
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Utrace
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at AG Soft
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Синхро
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Разработчик JAVA 8 (legacy) at Транснефть-Технологии
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at А2М
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java/Kotlin разработчик at Антара
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at R-Style Softlab (Эр-Стайл Софтлаб)
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик (Middle+/Senior) at СИГМА
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java разработчик at Центр Новых Финансовых Сервисов
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик в проект страховой компании at VeryIT
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик младшего/среднего уровня (junior/middle Java developer) at НАО Инфоком
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик (middle) at DIS Group
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Дворник (ТН) at ГБУ "ЖИЛИЩНИК РАЙОНА ФИЛЕВСКИЙ ПАРК"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java разработчик Middle+/Senior at Ростелеком Информационные Технологии
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java разработчик at НТЦ ЕЭС Информационные Комплексы
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Middle / Senior Java developer (Системы информационной безопасности) at Транснефть-Технологии
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at INPAS
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик (Сениор, Мидл+) at Картнода
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java Developer at Московская Биржа
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java разработчик at Бэнкс Софт Системс
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Разработчик Java at ДЖЕЙКЕТ РАБОТА
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Java разработчик at АТОН
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Junior Java-разработчик at Gridnine
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Фарватер
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Backend Developer (Java/Kotlin, Spring Boot, Oracle Database) at Форлинк
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Лига Цифровой Экономики
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Java developer at Lamoda Tech
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java разработчик (middle+/senior) at Swordfish Security
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Java-разработчик / Java developer at HR GROW
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java разработчик (middle) at MERLION
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший Java-разработчик at Синхро
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java developer at РТЛабс
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Middle Java Developer at ИЦ АЙ-ТЕКО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Middle Java разработчик (Страховой конвейер) at Страховая компания Сбербанк страхование
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at getmatch
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Junior Java-разработчик at Рыбаков Алексей Николаевич
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Разработчик Java at Ростелеком Информационные Технологии
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Разработчик ( Java / React ) Платёжный сервис at ГКУ Инфогород
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Рефни
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java Spring Boot разработчик at Юнитариус
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java Developer at Дартс рекрутинг сервисез
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at DCloud
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Кадровое Агентство ОК Консалт
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Насонов Ярослав Константинович
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Java Developer at Правительство Москвы
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Java разработчик at МКК Финмолл
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Java developer at Hi, Rockits!
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: QA Automation Engineer (Java) at Datanomica
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Кибернетика
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Middle Java Developer at Тайгер Трейд
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Java-разработчик at ЛАНИТ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик Middle at Единая Цифровая Платформа
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java Developer at evrone.ru
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java разработчик at MIA Dev
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Лаборатория Безопасных Систем
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Backend разработчик (Java, middle) at Ком3
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик (Junior) at Мираполис
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Middle+/Senior Kotlin/Java developer at X5 Tech
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Junior Java/Kotlin Developer at MostFinance
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик (middle/middle+) at ВСК, САО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Java разработчик at Кросстех Солюшнс Групп
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at БФТ-Холдинг
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Java Backend Engineer at Outlines Technologies
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Middle Java разработчик at Национальная Лотерея
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Разработчик Java / Java Developer (middle) at АГ-Логистик
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Аврора
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Middle Java / Kotlin Developer at 8B WORLD PTE. LTD.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Тракторист at АНО "РП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Студия Олега Чулакова
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик (middle+) at Фаззи Лоджик Лабс
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик (Senior) at СК Сбербанк страхование жизни
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Backend Developer (Java/Kotlin) at ДэвТим-Групп
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик Middle + at Фабрика Решений
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Lead Java Developer at Lenkep recruitment
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик Middle+ at Datanomica
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик (Middle) at НИИАС
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Middle Разработчик Java (PKI) at ИЦ АЙ-ТЕКО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Middle Java-разработчик at СИНАПС ТЕХНОЛОДЖИ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Водитель автомобиля at АНО "РП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Java developer at RedLab
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java разработчик at Цифровые технологии и платформы
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Scala/java developer at Datanomica
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: QA Automation инженер (Java) at Deventica
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Аналитика ИТ Лаб
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at Лига Цифровой Экономики
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Разработчик Java/Kotlin at РТК – Цифровой документооборот
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java Developer (middle) at Московский филиал АО ЦентрИнформ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior Kotlin/Java Developer at Xello
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Head of Backend (Java/Kotlin) at Clear Mind
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Senior java разработчик at Интерфакс
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Рабочий комплексной уборки at АНО "РП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Оператор склада at ООО "МП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Механик at АНО "РП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Рабочий зеленого хозяйства at АНО "РП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Режиссер at ООО "РАЗВЛЕКАТЕЛЬНЫЙ ЦЕНТР"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист по метрологии (метролог) at ГБУ "ЖИЛИЩНИК ДМИТРОВСКОГО РАЙОНА"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Техник at ООО "МЕТРО КЭШ ЭНД КЕРРИ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Слесарь-электромонтажник at ФИЛИАЛ ФГУП "ГРЧЦ" В ЦЕНТРАЛЬНОМ ФЕДЕРАЛЬНОМ ОКРУГЕ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий специалист ПЭО at ОАО НПО "РОДИНА"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-конструктор отдела гидравлических агрегатов и рулевых приводов at ОАО НПО "РОДИНА"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Контролер-инструментальщик at ООО "М СНАБ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Монтажник по монтажу стальных и железобетонных конструкций at ООО "СК ГАЛЛЕОН"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Начальник сектора по обслуживанию автоматической телефонной станции at ГБУ Финансово-Хозяйственное Управление
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Дежурный по комплексу зданий at ГБУ Финансово-Хозяйственное Управление
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер по защите информации at ООО "ВАРТАМАНА ИНТЕРНЭШНЛ ТРЕДЕРС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-энергетик at АО "РЕАТЭКС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Охранник 4 разряда at ООО "ЧОО "СОКОЛ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Упаковщик-фасовщик полуфабрикатов (вахта) at ИП Колмыкова Ольга Юрьевна
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Комплектовщик (вахта) at ИП Колмыкова Ольга Юрьевна
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Кладовщик-комплектовщик (вахта) at ИП Колмыкова Ольга Юрьевна
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Грузчик на почтовый склад (вахта) at ИП Колмыкова Ольга Юрьевна
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист технической поддержки at ООО "ТАЙЛЕ РУС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Грузчик -разнорабочий на склад (вахта) at ИП Колмыкова Ольга Юрьевна
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Грузчик (теплый склад) at ИП Колмыкова Ольга Юрьевна
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Комплектовщик -маркировщик (вахта) at ИП Колмыкова Ольга Юрьевна
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Грузчик at ИП Колмыкова Ольга Юрьевна
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: помощник воспитателя at ГБОУ ШКОЛА № 1253
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: помощник воспитателя at ГБОУ ШКОЛА № 1253
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Охранник 4 разряда at ООО "ЧОО "СОКОЛ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший менеджер по обслуживанию (ЦСКА) at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист административно-хозяйственного отдела at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Логист в транспортную компанию at ООО "Джобкарт"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший менеджер по обслуживанию at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист единого контакт-центра at ГБУ МФЦ ГОРОДА МОСКВЫ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист управления информационной безопасности at ГБУ МФЦ ГОРОДА МОСКВЫ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Уборщик служебных помещений at ГБУ ДО МКСШОР "ВОСТОК"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший клиентский менеджер at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший клиентский менеджер (м. Строгино) at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший клиентский менеджер (м. Свиблово) at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший клиентский менеджер at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший клиентский менеджер (м. Измайловская) at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший клиентский менеджер (м. Нижегородская) at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший клиентский менеджер at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший клиентский менеджер (Выхино) at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Помощник руководителя / секретарь at ИП Алиев Руслан Чингизович
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Бухгалтер at ООО "Джейкет.ру"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: музейный смотритель at ТЕАТРАЛЬНЫЙ МУЗЕЙ ИМ. А.А. БАХРУШИНА, БАХРУШИНСКИЙ МУЗЕЙ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Педагог-хореограф at ООО "Джейкет.ру"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший клиентский менеджер (м. Новокосино) at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Учитель русского языка и литературы at ГБОУ ШКОЛА № 1324
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Бухгалтер at Обособленное подразделение АО "Апатит" в г. Москве
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Аналитик at ООО "БФТ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-электроник at ООО ТПК "ВАРТОН"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Учитель биологии at ГБОУ ШКОЛА № 1793
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-проектировщик at ООО "ГЛОБАЛ МЭП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Дворник at ООО "ТЕХЖИЛКОМСТРОЙ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Водитель автомобиля at ООО "ТЕХЖИЛКОМСТРОЙ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Главный специалист по микропроцессорным системам РЗА at АО "ОЭК"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист по оцифровке бумажных документов at ФИЛИАЛ ПУБЛИЧНО-ПРАВОВОЙ КОМПАНИИ "РОСКАДАСТР" ПО МОСКВЕ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-программист микроконтроллеров junior at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист по закупкам at ФКУ "ГБ МСЭ ПО МОСКОВСКОЙ ОБЛАСТИ" МИНТРУДА РОССИИ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Рабочий по комплексному  обслуживанию и ремонту здания at ГБОУ ШКОЛА № 1253
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Разработчик ПЛИС at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Менеджер по работе с клиентами (китайский язык) at VK
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий инженер радиоэлектронных систем at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-схемотехник at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Водитель автомобиля at ФГБУ "НМИЦ ОНКОЛОГИИ ИМ. Н.Н. БЛОХИНА" МИНЗДРАВА РОССИИ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-программист 3 категории (FPGA Developer) at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Техник по испытаниям ЭКБ at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Фрезеровщик 4 разряда-6 разряда at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий инженер-исследователь в области разработки ПО под микроконтроллеры at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Схемотехник по спутниковой навигации at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий экономист at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ветеринарный врач at ГБУ "МОСВЕТОБЪЕДИНЕНИЕ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ветеринарный врач at ГБУ "МОСВЕТОБЪЕДИНЕНИЕ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-разработчик ПЛИС и микроконтроллеров at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ветеринарный врач at ГБУ "МОСВЕТОБЪЕДИНЕНИЕ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Сетевой инженер at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ветеринарный фельдшер at ГБУ "МОСВЕТОБЪЕДИНЕНИЕ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист по парамедицинскому педикюру (подолог) at ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ ПРОШИНА ВЕРА НИКОЛАЕВНА
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Аналитик по расходам и численности дочерних компаний Сбера at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Товаровед ломбарда at ООО "Фора-Ломбард"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Машинист мини-погрузчика at ИП Алиев Руслан Чингизович
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Кладовщик at ООО "Джобкарт"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Преподаватель спецдисциплин (сантехнические устройства, кондиционирование и вентиляция воздуха) at ГБПОУ города Москвы «Образовательный комплекс градостроительства «Столица»
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ветеринарный врач at ГБУ "МОСВЕТОБЪЕДИНЕНИЕ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер по защите информации at ООО "ОПАЛ-ТРЕЙДИНГ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист по разработке программ испытаний ЭКБ at АО "РОССИЙСКИЕ КОСМИЧЕСКИЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Руководитель проекта по планированию и координации at АО "КОНЦЕРН ВКО "АЛМАЗ - АНТЕЙ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Руководитель проекта по координации at АО "КОНЦЕРН ВКО "АЛМАЗ - АНТЕЙ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Заместитель начальника отдела инженерного проектирования at АО "КОНЦЕРН ВКО "АЛМАЗ - АНТЕЙ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-программист C++ at АО "КОНЦЕРН ВКО "АЛМАЗ - АНТЕЙ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист по охране труда at ООО "МОДТФИЛ-М"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Медицинская сестра по массажу at ООО "КОНТУР"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер по защите информации at ООО "ОПАЛ-ТРЕЙДИНГ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер по организации управления производством at ООО "ОПАЛ-ТРЕЙДИНГ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Управляющий предприятия at ООО "ОПАЛ-ТРЕЙДИНГ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Директор по экономике at ООО "ОПАЛ-ТРЕЙДИНГ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-программист at ООО "ОПАЛ-ТРЕЙДИНГ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Электромонтёр по ремонту и обслуживанию оборудования at АО "ЦДТ НА ЛЕНИНСКОМ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Слесарь по контрольно-измерительным приборам и автоматике at ООО "ТРЭЙД ИНВЕСТМЕНТС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Бухгалтер at ООО "ГРАНД СЕРВИС БИЛДИНГ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Техник по эксплуатации at АО "ОЛИМП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: экономист at АО "СК ФЛАН-М"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ассистент отдела ВЭД at ООО "КОМПАНИЯ ЮТА"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий специалист отдела кадров at ФГБУ "ГЛАВРЫБВОД"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Младший аналитик (управление исследований и публикаций) at Центральный банк Российской Федерации (Банк России)
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Начальник отдела администрирования ЕИС и оформления соглашений at ГНИВЦ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Data Scientist (риск-моделирование) at Центральный банк Российской Федерации (Банк России)
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Кассир-консультант at Лемана ПРО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: TeamLead Java (отзыв рублевого платежного поручения) at СБЕР
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Продавец-консультант at Лемана ПРО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: AI инженер (создание и внедрение AI-агентов) at СБЕР
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий специалист по охране труда at СБЕР
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-монтажник по установке оборудования и подключению интернета at МТС
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший клиентский менеджер (м. Строгино) at СБЕР
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Методолог (кластер "Фиксированная оплата") at СБЕР
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист отдела контроля качества (лаборатории) at ГБУ "Автомобильные дороги"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Водитель-экспедитор на автомобиль компании (категория В/С) at ООО ТД "ЛФБ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист отдела пожарной безопасности at ГБУ "Автомобильные дороги"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист-теплотехник/ теплоэнергетик at ГБУ "Автомобильные дороги"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: повар at ИП КХУАТ Т.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Контролер технического состояния транспортных средств (механик по выпуску транспорта) at ГБУ "Автомобильные дороги"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Мастер отдела благоустройства и содержания at ГБУ "Автомобильные дороги"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at Почта России
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at Почта России
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Повар at ИП ЛЫОНГ Т.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at Почта России
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: продавец-консультант at ООО "ГЕОКС РУС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Рабочий по комплексному обслуживанию и ремонту зданий at ВГТРК
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: продавец-консультант at ООО "ГЕОКС РУС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Водитель автомобиля at ВГТРК
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Бухгалтер-кассир, бухгалтер на первичную документацию at МКА Клишин и Партнеры
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Менеджер маркетплейса at ООО "Джейкет.ру"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер по организации управления производством at ООО "ВЕЛИПРОФИТ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: главный специалист бюро главных инженеров проектов at ПРОЕКТНО-ИЗЫСКАТЕЛЬСКИЙ ИНСТИТУТ ЭЛЕКТРИФИКАЦИИ ЖЕЛЕЗНЫХ ДОРОГ И ЭНЕРГЕТИЧЕСКИХ УСТАНОВОК "ТРАНСЭЛЕКТРОПРОЕКТ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: техник отдела выпуска проектов at ПРОЕКТНО-ИЗЫСКАТЕЛЬСКИЙ ИНСТИТУТ ЭЛЕКТРИФИКАЦИИ ЖЕЛЕЗНЫХ ДОРОГ И ЭНЕРГЕТИЧЕСКИХ УСТАНОВОК "ТРАНСЭЛЕКТРОПРОЕКТ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at Почта России
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Подсобный рабочий at ООО "ЧАСТНОЕ АГЕНТСТВО ЗАНЯТОСТИ "ИНТРУД-ПРОИЗВОДСТВО"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: водитель автомобиля at ФКУ "ГБ МСЭ ПО МОСКОВСКОЙ ОБЛАСТИ" МИНТРУДА РОССИИ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Няня at ООО "ЧАСТНОЕ АГЕНТСТВО ЗАНЯТОСТИ "ИНТРУД-ПРОИЗВОДСТВО"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Бухгалтер at ФКУ "ГБ МСЭ ПО МОСКОВСКОЙ ОБЛАСТИ" МИНТРУДА РОССИИ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер по внедрению новой технике и технологии at ООО "ВЕЛЕС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Диспетчер аварийно-диспетчерской службы at ОАО "РЭП-52 ЗАО"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: медицинская сестра участковая at ГБУЗ "ДГП №120 ДЗМ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: врач-оториноларинголог at ГБУЗ "ДГП №120 ДЗМ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Продавец-консультант в отдел тканей at ПРИМА
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: медицинская сестра по массажу at ИП ЧАЛЫЙ А. В.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Повар at ООО "ТЕРЕМОК - СТРИТ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: медицинская сестра по массажу at ИП ЧАЛЫЙ А. В.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Повар at ИП ТА В.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Повар at ИП ЛЕ М.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: инженер по подготовке производства at ИП ЛЕ М.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Управляющий предприятия at ИП ЛЫОНГ Т.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Начальник предприятия at ИП ЛЫОНГ Т.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-программист at ООО "ИНАЯ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: директор по экономике at ООО "ИНАЯ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Повар at ИП НГУЕН Д.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: повар at ИП НГУЕН Т.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Аналитик данных at ТЕВА
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Маркетолог-аналитик at ТЕВА
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Администратор семейного досугового центра at ООО "Джейкет.ру"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Охранник-контролер (м.Новокузнецкая) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Грузчик (м. Новокузнецкая) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Печатник-шелкограф at ИП Алиев Руслан Чингизович
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Официант (м. Владыкино) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Слесарь по ремонту технологических установок at ООО "ВЕЛЕС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Повар (м.Новокузнецкая) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Повар (м.Братиславская) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Водитель-курьер на корпоративном автомобиле (г. Москва) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Бармен в ресторан (м. Братиславская) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер  по организации управления производством at ООО "ВЕЛЕС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Главный специалист по расчету нормативов и финансовых показателей at АО МОСОБЛБАНК
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Кассир в ресторан (м. Цветной бульвар) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Повар (м. Беломорская) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Менеджер ресторана (м. Братиславская) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Кассир (м. ЦСКА) at ООО "Джобкарт"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер по подготовке производства at ООО "ВЕЛИПРОФИТ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Хостес в ресторан (м. Владыкино) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Домработник/ца at ИП Алиев Руслан Чингизович
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Официант в ресторан (м. Братиславская) at ООО "Спейс Эмоушн"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист по информационной безопасности at ФГБУ "НМИЦ ГЕМАТОЛОГИИ" МИНЗДРАВА РОССИИ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: буфетчица at ФГБУ "НМИЦ ГЕМАТОЛОГИИ" МИНЗДРАВА РОССИИ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Prompt Engineer/ Data Analyst (команда Забота о клиентах) at Сбербанк России, ПАО
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Лаборант химического анализа at ООО "Джейкет.ру"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: старший помощник менеджера по работе с клиентами at ООО "МЕДИА 108"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Электрослесарь строительный at АНО "МОСКОВСКАЯ РЕКЛАМА"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at УФПС Г.МОСКВЫ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at УФПС Г.МОСКВЫ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: слесарь-ремонтник 6 разряда at АНО "МОСКОВСКАЯ РЕКЛАМА"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: слесарь-ремонтник 5 разряда at АНО "МОСКОВСКАЯ РЕКЛАМА"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Техник Молочно-раздаточного пункта at ГАУ ИНПЦ "ГОРМЕДТЕХНИКА"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Официант в ресторан at ООО "ХОТЭЛ МЕНЕДЖМЕНТ КОМПАНИ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Повар-универсал at ООО "ХОТЭЛ МЕНЕДЖМЕНТ КОМПАНИ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Швея at ООО "АВИДЕВЕЛОПМЕНТ-М"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Монтажник бетонных и металлических конструкций at ООО "ЛИДЕР-СТРОЙ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий юрисконсульт at ГБУ "ЖИЛИЩНИК ДОНСКОГО РАЙОНА"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист по налогам и сборам at ИФНС РОССИИ № 14 ПО Г. МОСКВЕ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at УФПС Г.МОСКВЫ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер по внедрению новой техники и технологии at ООО "ВЕЛИПРОФИТ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at УФПС Г.МОСКВЫ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at УФПС Г.МОСКВЫ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at УФПС Г.МОСКВЫ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Продавец-консультант at ООО "ВИНЛАБ-ЗАПАД"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at УФПС Г.МОСКВЫ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Почтальон at УФПС Г.МОСКВЫ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Бармен at ООО "ХОСПИТЭЛИТИ ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Уборщик производственных и служебных помещений at ООО "ВИП РЕСУРС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Охранник at ООО "ОО "ИМПЕРАТОР"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-программист at АО НПО "МОБИЛЬНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-программист at АО НПО "МОБИЛЬНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Водитель автомобиля at ГБУ "ЖИЛИЩНИК РАЙОНА ЩУКИНО"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Медицинская сестра по массажу at ООО "РЕСТО-ПЛЮС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Переводчик классической художественной литературы at ООО НИЦ "ЛАДОМИР"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Корректор художественной литературы at ООО НИЦ "ЛАДОМИР"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Редактор книжного издательства at ООО НИЦ "ЛАДОМИР"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Художник-оформитель книг at ООО НИЦ "ЛАДОМИР"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Переводчик классической художественной литературы at ООО НИЦ "ЛАДОМИР"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: помощник менеджера склада at ООО НИЦ "ЛАДОМИР"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер по организации эксплуатации, обслуживанию и ремонту зданий и сооружений at ООО НИЦ "ЛАДОМИР"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-проектировщик в области связи (телекоммуникаций) at ООО "ПЛАЗМА-Т"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Дворник at АО "НИИ ТП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Главный специалист по мониторингу и реагированию на киберугрозы at АО МОСОБЛБАНК
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Водитель с обязанностями экспедитора at ПАО "МОСТОЧЛЕГМАШ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Токарь at ПАО "МОСТОЧЛЕГМАШ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: помощник менеджера по продажам at ПАО "МОСТОЧЛЕГМАШ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Администратор-кассир at ООО "Джобкарт"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Полицейский патрульно-постовой службы полиции at ООО "Джейкет.ру"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Продавец-консультант салона at Индивидуальный предприниматель ГИЗАТУЛЛИНА АЛИНА РУСТЕМОВНА
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Медицинская сестра по массажу at ООО "САН ТАЙ СПА"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Автомойщик at ООО "Джобкарт"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-программист at ООО "КБ "ДОРС"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: подсобный рабочий at ООО "ТРЕНД"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Сетевой и системный администратор at ГБУДО Г. МОСКВЫ "ДМШ ИМЕНИ Ф.И. ШАЛЯПИНА"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: термист at ООО "ЕПК-НОВЫЕ ТЕХНОЛОГИИ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Токарь-карусельщик at ООО "ЕПК-НОВЫЕ ТЕХНОЛОГИИ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Монтажник радиоэлектронной аппаратуры и приборов at АО "ГК "ЭЛЕКТРОНИНВЕСТ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Главный специалист-эксперт, сетевой инженер at Социальный фонд России
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Официант at ООО "ХОСПИТЭЛИТИ ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший повар холодного цеха at ООО "ХОСПИТЭЛИТИ ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования at НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ "МИЭТ"; НИУ МИЭТ;МИЭТ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Администратор СПА и фитнес центра at ООО "ХОСПИТЭЛИТИ ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Администратор службы приема и размещения at ООО "ХОСПИТЭЛИТИ ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Повар at ООО "ХОСПИТЭЛИТИ ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Косметик at ООО "ХОСПИТЭЛИТИ ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Старший смены ресторана at ООО "ХОСПИТЭЛИТИ ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Су-шеф at ООО "ХОСПИТЭЛИТИ ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Менеджер ресторана и бара at ООО "ХОСПИТЭЛИТИ ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Слесарь по ремонту технологических установок at ООО "БЭЙБЭЙ ФУД"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Помощник воспитателя at ГБУ ЦССВ "ЦЕНТРАЛЬНЫЙ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Медицинская сестра по физиотерапии at ГБУ ЦССВ "ЦЕНТРАЛЬНЫЙ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Швея at ИП ЗАМИРАЙЛО А. Ф.
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Учитель химии at ГБОУ Школа № 1583
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Учитель физики at ГБОУ Школа № 1583
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Учитель русского языка и литературы at ГБОУ Школа № 1583
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Слесарь-сантехник по ремонту сантехнического оборудования at НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ "МИЭТ"; НИУ МИЭТ;МИЭТ
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Врач-педиатр участковый at ГБУЗ "ДГП № 12 ДЗМ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Операционная медицинская сестра at ФГБУ "ФНКЦ ДЕТЕЙ И ПОДРОСТКОВ ФМБА РОССИИ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Юрист! at ПАРТИЯ "ЕДИНАЯ РОССИЯ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Врач функциональной диагностики at ГБУЗ "ДГП № 12 ДЗМ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Врач-оториноларинголог at ГБУЗ "ДГП № 12 ДЗМ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Уборщик территорий at ФГБУ "ТРАНСПОРТНЫЙ КОМБИНАТ "РОССИЯ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Рентгенолаборант at ГБУЗ "ДГП № 12 ДЗМ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Учитель математики at ГБОУ Школа № 1583
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Медицинский статистик at ГБУЗ "ДГП № 12 ДЗМ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: рабочий по комплексному обслуживанию зданий at ЧПОУ "МОСКОВСКИЙ ГОРОДСКОЙ ОТКРЫТЫЙ КОЛЛЕДЖ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Контролер КПП at «Группа ГУТА»
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Токарь at «Группа ГУТА»
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования at «Группа ГУТА»
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Тракторист at «Группа ГУТА»
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Рабочий на пищевое производство at «Группа ГУТА»
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Оператор линии на пищевое производство at «Группа ГУТА»
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Менеджер по продвижению услуг at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Массажист at ООО "ЛЕТО"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Инженер-механик по ремонту теплового технологического оборудования at Ресторанный Сервис
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Повар 6 разряда at ФГБУ "ТРАНСПОРТНЫЙ КОМБИНАТ "РОССИЯ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий бухгалтер по учёту заработной платы at ФГБУ "ТРАНСПОРТНЫЙ КОМБИНАТ "РОССИЯ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий специалист отдела материально-технического обеспечения at ФГБУ "ТРАНСПОРТНЫЙ КОМБИНАТ "РОССИЯ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Электромонтер по ремонту и обслуживанию электрооборудования 5 разряда at ФГБУ "ТРАНСПОРТНЫЙ КОМБИНАТ "РОССИЯ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Главный специалист-эксперт (подготовка функциональных требований) at Социальный фонд России
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Штукатур at ООО "КАПИТАЛ-ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист по маркетинговым коммуникациям at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Техник по кондиционированию at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Маляр at ООО "КАПИТАЛ-ГРУПП"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий инженер-схемотехник at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист отдела транспорта и таможенного оформления at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист по планированию поставок at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Аналитик бизнес-процессов at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Бизнес-аналитик по управлению запасами в 1C ERP at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Младший специалист по работе с клиентами at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Менеджер по внутренним контролям и рискам at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Специалист по работе с онлайн дилерами at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Стажер специалиста по работе с клиентами at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Ведущий инженер-конструктор at АО "СЭ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Охранник at ООО "ЧОО "ТТ"
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Adding existing vacancy: Java-разработчик at КБ Уральский банк реконструкции и развития (УБРиР)
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 0
+2025-06-07 00:47:46 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 0
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 2
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 2
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 3
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 3
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:47 [scheduling-1] ERROR c.e.service.general.VacancyLogger - Failed to save vacancy with link unknown: For input string: "от 0"
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:47 [scheduling-1] ERROR c.e.service.general.VacancyLogger - Failed to save vacancy with link unknown: For input string: "от 0"
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 1
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 1
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 4
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 4
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 2
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 2
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 5
+2025-06-07 00:47:47 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 5
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:48 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 3
+2025-06-07 00:47:48 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 3
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:48 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 6
+2025-06-07 00:47:48 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 6
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:48 [scheduling-1] ERROR c.e.service.general.VacancyLogger - Failed to save vacancy with link unknown: For input string: "от 0"
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:48 [scheduling-1] ERROR c.e.service.general.VacancyLogger - Failed to save vacancy with link unknown: For input string: "от 0"
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:48 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 4
+2025-06-07 00:47:48 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 4
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+2025-06-07 00:47:48 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 7
+2025-06-07 00:47:48 [scheduling-1] INFO  c.e.service.general.VacancyLogger - Fetching page 7
+]]></system-out>
+  </testcase>
+  <testcase name="testWriteVacanciesXlsxEmptyListGeneratesOnlyHeader" classname="com.example.service.general.ExportServiceTest" time="0.071"/>
+  <testcase name="testWriteVacanciesXlsxSingleVacancyAndHeader" classname="com.example.service.general.ExportServiceTest" time="0.036">
+    <error message="Cannot invoke &quot;org.apache.poi.ss.usermodel.Row.getCell(int)&quot; because &quot;dataRow&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Row.getCell(int)" because "dataRow" is null
+	at com.example.service.general.ExportServiceTest.testWriteVacanciesXlsxSingleVacancyAndHeader(ExportServiceTest.java:183)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></error>
+    <system-out><![CDATA[Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+]]></system-out>
+  </testcase>
+  <testcase name="testWriteVacanciesXlsxSingleVacancyAndHeader" classname="com.example.service.general.ExportServiceTest" time="0.062">
+    <error message="Cannot invoke &quot;org.apache.poi.ss.usermodel.Row.getCell(int)&quot; because &quot;dataRow&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Row.getCell(int)" because "dataRow" is null
+	at com.example.service.general.ExportServiceTest.testWriteVacanciesXlsxSingleVacancyAndHeader(ExportServiceTest.java:183)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></error>
+    <system-out><![CDATA[Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+]]></system-out>
+  </testcase>
+  <testcase name="testWriteVacanciesCsvMultipleVacancies_withNullFields" classname="com.example.service.general.ExportServiceTest" time="0.002">
+    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at com.example.service.general.ExportServiceTest.testWriteVacanciesCsvMultipleVacancies_withNullFields(ExportServiceTest.java:115)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+]]></system-out>
+  </testcase>
+  <testcase name="testWriteVacanciesCsvMultipleVacancies_withNullFields" classname="com.example.service.general.ExportServiceTest" time="0.002">
+    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at com.example.service.general.ExportServiceTest.testWriteVacanciesCsvMultipleVacancies_withNullFields(ExportServiceTest.java:115)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        v1_0.id 
+    from
+        vacancies v1_0 
+    where
+        v1_0.link=? 
+    fetch
+        first ? rows only
+]]></system-out>
+  </testcase>
+</testsuite>
